@@ -1,14 +1,15 @@
 # MIDI Console Application
 
-This project is a simple Python console application that implements a MIDI interface to display the note pressed on the keyboard. It utilizes the `mido` library for MIDI handling and `python-rtmidi` for real-time MIDI input/output.
+This project is a simple Python console application that implements a MIDI interface to display the notes pressed on the keyboard. It utilizes the `pygame.midi` for real-time MIDI input.
 
 ## Project Structure
 
 ```
-midi-console-app
-├── src
-│   ├── main.py          # Entry point of the application
-│   └── midi_interface.py # Contains the MIDIInterface class
+pygame_piano
+├── midi_pkg
+│   ├── main.py           # Console app to display pressed midi notes
+│   └── run.py            # Pygame window to display midi notes pressed
+│   └── practice.py       # Pygame window to practice finding notes on midi keyboard
 ├── requirements.txt      # Lists project dependencies
 └── README.md             # Documentation for the project
 ```
@@ -26,15 +27,10 @@ pip install -r requirements.txt
 To run the application, execute the following command:
 
 ```
-python src/main.py
+python midi_pkg/main.py
+python midi_pkg/practice.py
 ```
 
 Once the application is running, press any key on your keyboard to see the corresponding MIDI note displayed in the console.
 
-## MIDI Interface
-
-The `MIDIInterface` class in `midi_interface.py` handles all MIDI input and output. It includes methods to start listening for keyboard events and to translate key presses into MIDI note values.
-
-## Contributing
-
-If you would like to contribute to this project, please feel free to submit a pull request or open an issue for discussion.
+*Note: ***on some keyboards the USB midi interface needs to be unolugged on evry run. Sometimes just shuting the keyboard down and reopening it works.***
