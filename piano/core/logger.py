@@ -34,7 +34,7 @@ logging.config.dictConfig({
         'console_handler': {
             'class': 'logging.StreamHandler',
             'formatter': 'simple_console_formatter',
-            'level': 'WARNING',
+            'level': 'INFO',
         },
     },
     'root': {

@@ -6,11 +6,6 @@ A pygame-based MIDI piano practice application for learning notes.
 
 import sys
 import os
-
-# Add the project root to Python path to ensure imports work correctly
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
-# Import and initialize the logger first
 from piano.core.logger import get_logger
 
 # Create logger for this module
@@ -69,9 +64,7 @@ class PianoPracticeApp:
 
 def main():
     """Entry point for the application."""
-    logger.info("=" * 60)
     logger.info("Piano Practice Application Starting")
-    logger.info("=" * 60)
     
     try:
         app = PianoPracticeApp()

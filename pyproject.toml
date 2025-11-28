@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "piano"
+version = "1.0.0"
+description = "Piano practicing application using midi connection to a piano keyboard."
+readme = "README.md"
+authors = [
+    { name = "Robert Boivin", email = "poivronjaune@gmail.com" }
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+requires-python = "<3.14"
+dependencies = [
+    "pygame"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["piano*"]
