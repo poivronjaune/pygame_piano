@@ -17,60 +17,60 @@ class PianoPracticeApp:
     
     def __init__(self):
         """Initialize the Piano Practice application."""
-        logger.info("Initializing Piano Practice Application")
+        logger.info("[Main] - Initializing Piano Practice Application")
         self.running = False
         
     def setup(self):
         """Set up the application resources."""
-        logger.debug("Setting up application resources")
+        logger.debug("[Main] - Setting up application resources")
         # TODO: Initialize pygame
         # TODO: Initialize MIDI interface
         # TODO: Initialize UI components
-        logger.info("Application setup complete")
+        logger.info("[Main] - Application setup complete")
         
     def run(self):
         """Main application loop."""
-        logger.info("Starting Piano Practice Application")
+        logger.info("[Main] - Starting Piano Practice Application")
         self.running = True
         
         try:
             self.setup()
-            logger.info("Application is running...")
+            logger.info("[Main] - Application is running...")
             
             # TODO: Main game loop will go here
             # For now, just demonstrate logging
-            logger.debug("This would be where the main loop runs")
+            logger.debug("[Main] - This would be where the main loop runs")
             
             # Simulate some application events for logging demonstration
-            logger.info("Application started successfully")
-            logger.debug("Debug: Checking MIDI devices...")
-            logger.warning("Warning: No MIDI device connected (simulated)")
+            # logger.info("Application started successfully")
+            # logger.debug("Debug: Checking MIDI devices...")
+            # logger.warning("Warning: No MIDI device connected (simulated)")
             
         except KeyboardInterrupt:
-            logger.info("Application interrupted by user")
+            logger.info("[Main] - Application interrupted by user")
         except Exception as e:
-            logger.error(f"Unexpected error: {e}", exc_info=True)
+            logger.error(f"[Main] - Unexpected error: {e}", exc_info=True)
         finally:
             self.cleanup()
             
     def cleanup(self):
         """Clean up application resources."""
-        logger.info("Cleaning up application resources")
+        logger.info("[Main] - Cleaning up application resources")
         # TODO: Close MIDI connections
         # TODO: Quit pygame properly
         # TODO: Any other cleanup
-        logger.info("Application shutdown complete")
+        logger.info("[Main] - Application shutdown complete")
 
 
 def main():
     """Entry point for the application."""
-    logger.info("Piano Practice Application Starting")
+    logger.info("[Main] - Piano Practice Application Starting")
     
     try:
         app = PianoPracticeApp()
         app.run()
     except Exception as e:
-        logger.critical(f"Failed to start application: {e}", exc_info=True)
+        logger.critical(f"[Main] - Failed to start application: {e}", exc_info=True)
         return 1
     
     return 0
