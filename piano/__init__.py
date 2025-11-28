@@ -9,7 +9,7 @@ except PackageNotFoundError:
     raise RuntimeError("piano package is not installed properly. Check TOML file and use 'pip install -e .'")
 
 def version():
-    """Display bhtp version information."""
-    print(f"bhtp version: {__version__}")
+    """Display piano version information."""
+    print(f"piano version: {__version__}")
 
 __all__ = ["__version__"]
